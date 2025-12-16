@@ -5,7 +5,7 @@ set "PYTHONIOENCODING=gbk"
 set "scriptdir=%~dp0"
 pushd "%scriptdir%" || exit /b 1
 
-for %%I in ("..\..\server\read_config") do set "READ_CONFIG_DIR=%%~fI"
+for %%I in ("..\server\read_config") do set "READ_CONFIG_DIR=%%~fI"
 if not exist "%READ_CONFIG_DIR%" mkdir "%READ_CONFIG_DIR%"
 
 echo Exporting Excel files to %READ_CONFIG_DIR%...
