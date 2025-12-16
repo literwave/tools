@@ -4,4 +4,3 @@ __pycache__/
 *.log
 .idea/
 .vscode/
-server/read_config/
