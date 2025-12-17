@@ -3,6 +3,7 @@
 
 from genericpath import exists
 import sys, os, re
+import shutil
 from tracemalloc import start
 import slpp
 import json
@@ -97,8 +98,9 @@ class parseFile():
 	def startParse(self):
 		# 这里用json做中间逻辑其实是为了方法好调用
 		# 需要支持全部重新导出
-		if exists("netPb.json"):
-			with open("netPb.json", "r+", encoding = "utf8") as f:
+		json_path = "../client/proto/netPb.json"
+		if exists(json_path):
+			with open(json_path, "r+", encoding = "utf8") as f:
 				ptoBuf = f.read()
 				pto = json.loads(ptoBuf)
 				difine = pto.get("define")
@@ -108,8 +110,22 @@ class parseFile():
 							self._nameToId[kk] = vv
 							self._startId = max(int(vv), self._startId)
 							self._idToMod[vv] = k
+		
+		# 确保目标目录存在
+		client_pto_dir = "../client/proto/pto/"
+		if not os.path.exists(client_pto_dir):
+			os.makedirs(client_pto_dir)
+
+		found_protos = set()
 		print(os.listdir(self._dir))
 		for fileName in os.listdir(self._dir):
+			if fileName.endswith(".proto"):
+				# 复制文件到 client/proto/pto
+				src_file = os.path.join(self._dir, fileName)
+				dst_file = os.path.join(client_pto_dir, fileName)
+				shutil.copy(src_file, dst_file)
+				print(f"Copied {fileName} to {client_pto_dir}")
+
 			if self.isPtoFile(fileName):
 				with open(self._dir + fileName, encoding = "utf8") as f:
 					ptoBuf = f.read()
@@ -123,8 +139,16 @@ class parseFile():
 							print(f"error,ptoName: {ptoName}")
 							raise ValueError
 						
+						found_protos.add(ptoName)
+
 						# 看是否在旧的协议中
 						if ptoName in self._nameToId:
+							# 检查包名是否变化
+							old_id = self._nameToId[ptoName]
+							if self._idToMod.get(old_id) != ptoModName:
+								print(f"Update package for {ptoName}: {self._idToMod.get(old_id)} -> {ptoModName}")
+								self._idToMod[old_id] = ptoModName
+								self._reWrite = True
 							continue
 						
 						self._startId
@@ -135,6 +159,18 @@ class parseFile():
 						self._idToMod.update({self._startId: ptoModName})
 						self._startId += 1
 						self._reWrite = True
+
+		# 清理不存在的旧协议
+		all_names = list(self._nameToId.keys())
+		for name in all_names:
+			if name not in found_protos:
+				print(f"Remove old protocol: {name}")
+				old_id = self._nameToId[name]
+				del self._nameToId[name]
+				if old_id in self._idToMod:
+					del self._idToMod[old_id]
+				self._reWrite = True
+
 	def dumpFile(self):
 		# 构建 define 字典，即使没有新协议也要生成文件
 		define = self._dumpNameId.get("define")
@@ -151,7 +187,7 @@ class parseFile():
 			print(self._dumpNameId)
 			tem = json.dumps(self._dumpNameId, indent=True)
 			# wirte json
-			with open("netPb.json", "w", encoding = "utf8") as f:
+			with open("../client/proto/netPb.json", "w", encoding = "utf8") as f:
 				f.write(tem)
 		
 		# 总是生成 lua 文件（即使没有新协议）
@@ -159,9 +195,11 @@ class parseFile():
 		_ToLua(luaDataTbl, define)
 		luaStr = "local define = "
 		luaStr = luaStr + "".join(luaDataTbl) + execute_lua_str()
-		with open("netPb.lua", "w", encoding = "utf8") as f:
+		with open("../server/proto/netPb.lua", "w", encoding = "utf8") as f:
 			f.write(luaStr)
 
 if __name__ == "__main__":
 	dir = "./" if len(sys.argv)<=1  else sys.argv[1]
+	if not dir.endswith('/') and not dir.endswith('\\'):
+		dir += '/'
 	parseFile = parseFile(dir)

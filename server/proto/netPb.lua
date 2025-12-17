@@ -1,32 +1,32 @@
 local define = {
-    Reward = {
-        s2c_show_reward = 256,
-        s2c_sync_user_diamond = 257
-    },
-    Heartbeat = {
-        c2s_heart_beat = 258,
-        s2c_heart_beat = 259
+    Build = {
+        s2c_req_all_build_end = 256,
+        s2c_sync_build = 257,
+        c2s_create_build = 258,
+        c2s_up_build = 259
     },
     Chat = {
         c2sChat = 260,
         s2cChat = 261
     },
-    Login = {
-        c2s_user_login = 262,
-        s2c_user_login = 263,
-        c2s_verify_login = 264,
-        s2c_verify_login = 265,
-        s2c_user_create = 266,
-        s2c_user_login_ok = 267
-    },
-    Build = {
-        s2c_req_all_build_end = 268,
-        s2c_sync_build = 269,
-        c2s_create_build = 270,
-        c2s_up_build = 271
+    Heartbeat = {
+        c2s_heart_beat = 262,
+        s2c_heart_beat = 263
     },
     Hero = {
-        s2c_sync_hero_base_info = 272
+        s2c_sync_hero_base_info = 264
+    },
+    Login = {
+        c2s_user_login = 265,
+        s2c_user_login = 266,
+        c2s_verify_login = 267,
+        s2c_verify_login = 268,
+        s2c_user_create = 269,
+        s2c_user_login_ok = 270
+    },
+    Reward = {
+        s2c_show_reward = 271,
+        s2c_sync_user_diamond = 272
     }
 }
 ID_TO_PACK_NAME = {}
