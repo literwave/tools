@@ -65,7 +65,7 @@ local function initPto()
 		for ptoName, id in pairs(packTbl) do
 			local packName = mod .. "." .. ptoName
 			ID_TO_PACK_NAME[id] = packName
-			PTONAME_TO_ID[ptoName] = id
+			PTONAME_TO_ID[packName] = id
 		end
 	end
 end
