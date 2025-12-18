@@ -56,6 +56,7 @@ def execute_lua_str():
     return '''\
 \nID_TO_PACK_NAME = {}
 PTONAME_TO_ID = {}
+PACK_NAME_TO_ID = {}
 ID_TO_PTONAME = {} -- 这里需要优化，其实就只有客户端发给后端才需要这个数据
 for_maker = {}
 for_caller = {}
@@ -65,7 +66,8 @@ local function initPto()
 		for ptoName, id in pairs(packTbl) do
 			local packName = mod .. "." .. ptoName
 			ID_TO_PACK_NAME[id] = packName
-			PTONAME_TO_ID[packName] = id
+			PTONAME_TO_ID[ptoName] = id
+			PACK_NAME_TO_ID[packName] = id
 		end
 	end
 end
