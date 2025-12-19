@@ -24,11 +24,11 @@ namespace Reward {
     static RewardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxyZXdhcmQucHJvdG8SBlJld2FyZBoMY29tbW9uLnByb3RvIicKD3MyY19z",
-            "aG93X3Jld2FyZBIUCgxzaG93VHlwZUxpc3QYAiADKAUiKAoVczJjX3N5bmNf",
-            "dXNlcl9kaWFtb25kEg8KB2RpYW1vbmQYASABKAViBnByb3RvMw=="));
+            "CgxyZXdhcmQucHJvdG8SBlJld2FyZCInCg9zMmNfc2hvd19yZXdhcmQSFAoM",
+            "c2hvd1R5cGVMaXN0GAIgAygFIigKFXMyY19zeW5jX3VzZXJfZGlhbW9uZBIP",
+            "CgdkaWFtb25kGAEgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Reward.s2c_show_reward), global::Reward.s2c_show_reward.Parser, new[]{ "ShowTypeList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Reward.s2c_sync_user_diamond), global::Reward.s2c_sync_user_diamond.Parser, new[]{ "Diamond" }, null, null, null, null)

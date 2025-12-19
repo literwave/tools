@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package Reward;
 
-import "common.proto";
+//import "common.proto";
 
 // 奖励
 message s2c_show_reward {
