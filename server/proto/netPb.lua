@@ -25,12 +25,12 @@ local define = {
         s2c_user_login_ok = 270
     },
     Reward = {
-        s2c_show_reward = 271
+        s2c_show_reward = 271,
+        s2c_sync_user_diamond = 272
     },
     User = {
-        s2c_sync_user_diamond = 272,
-        c2s_user_base_info = 272,
-        s2c_user_base_info = 273
+        c2s_user_base_info = 273,
+        s2c_user_base_info = 274
     }
 }
 ID_TO_PACK_NAME = {}
