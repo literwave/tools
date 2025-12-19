@@ -1,5 +1,5 @@
 
-¦
+ø
 
 user.protoUser"
 c2s_user_base_info"t
@@ -7,4 +7,8 @@ user.protoUser"
 name (	Rname
 headIcon (RheadIcon
 sex (Rsex
-	birthTime (R	birthTimebproto3
+	birthTime (R	birthTime"'
+c2s_change_user_sex
+sex (Rsex"'
+s2c_change_user_sex
+sex (Rsexbproto3
