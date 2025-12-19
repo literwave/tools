@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package User;
+
+message c2s_user_base_info {
+}
+
+message s2c_user_base_info {
+	string name = 1;
+    int32 headIcon = 2;
+    int32 sex = 3;
+    int32 birthTime = 4;
+}
