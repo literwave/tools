@@ -33,8 +33,8 @@ local define = {
         s2c_user_base_info = 274,
         c2s_change_user_sex = 275,
         s2c_change_user_sex = 276,
-        c2s_req_user_res = 276,
-        s2c_req_user_res = 277
+        c2s_req_user_res = 277,
+        s2c_req_user_res = 278
     }
 }
 ID_TO_PACK_NAME = {}
