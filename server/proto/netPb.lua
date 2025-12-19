@@ -51,6 +51,7 @@ local function initPto()
 			ID_TO_PACK_NAME[id] = packName
 			PTONAME_TO_ID[ptoName] = id
 			PACK_NAME_TO_ID[packName] = id
+			ID_TO_PTONAME[id] = ptoName
 		end
 	end
 end
