@@ -1,9 +1,12 @@
 
-‡
-common.protocommon"g
+²
+common.protoCommon"g
 reward_info
 
 rewardType (R
 rewardType
 itemType (RitemType
-	itemCount (R	itemCountbproto3
+	itemCount (R	itemCount")
+common_info
+k (Rk
+v (Rvbproto3

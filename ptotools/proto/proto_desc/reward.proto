@@ -2,11 +2,11 @@ syntax = "proto3";
 
 package Reward;
 
-//import "common.proto";
+import "common.proto";
 
 // 奖励
 message s2c_show_reward {
-//	repeated reward_info rewardList = 1;
+	repeated Common.reward_info rewardList = 1;
 	repeated int32 showTypeList = 2;
 }
 

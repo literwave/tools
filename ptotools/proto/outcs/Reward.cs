@@ -24,13 +24,14 @@ namespace Reward {
     static RewardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxyZXdhcmQucHJvdG8SBlJld2FyZCInCg9zMmNfc2hvd19yZXdhcmQSFAoM",
-            "c2hvd1R5cGVMaXN0GAIgAygFIigKFXMyY19zeW5jX3VzZXJfZGlhbW9uZBIP",
-            "CgdkaWFtb25kGAEgASgFYgZwcm90bzM="));
+            "CgxyZXdhcmQucHJvdG8SBlJld2FyZBoMY29tbW9uLnByb3RvIlAKD3MyY19z",
+            "aG93X3Jld2FyZBInCgpyZXdhcmRMaXN0GAEgAygLMhMuQ29tbW9uLnJld2Fy",
+            "ZF9pbmZvEhQKDHNob3dUeXBlTGlzdBgCIAMoBSIoChVzMmNfc3luY191c2Vy",
+            "X2RpYW1vbmQSDwoHZGlhbW9uZBgBIAEoBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Reward.s2c_show_reward), global::Reward.s2c_show_reward.Parser, new[]{ "ShowTypeList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Reward.s2c_show_reward), global::Reward.s2c_show_reward.Parser, new[]{ "RewardList", "ShowTypeList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Reward.s2c_sync_user_diamond), global::Reward.s2c_sync_user_diamond.Parser, new[]{ "Diamond" }, null, null, null, null)
           }));
     }
@@ -76,6 +77,7 @@ namespace Reward {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public s2c_show_reward(s2c_show_reward other) : this() {
+      rewardList_ = other.rewardList_.Clone();
       showTypeList_ = other.showTypeList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,14 +88,22 @@ namespace Reward {
       return new s2c_show_reward(this);
     }
 
+    /// <summary>Field number for the "rewardList" field.</summary>
+    public const int RewardListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Common.reward_info> _repeated_rewardList_codec
+        = pb::FieldCodec.ForMessage(10, global::Common.reward_info.Parser);
+    private readonly pbc::RepeatedField<global::Common.reward_info> rewardList_ = new pbc::RepeatedField<global::Common.reward_info>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Common.reward_info> RewardList {
+      get { return rewardList_; }
+    }
+
     /// <summary>Field number for the "showTypeList" field.</summary>
     public const int ShowTypeListFieldNumber = 2;
     private static readonly pb::FieldCodec<int> _repeated_showTypeList_codec
         = pb::FieldCodec.ForInt32(18);
     private readonly pbc::RepeatedField<int> showTypeList_ = new pbc::RepeatedField<int>();
-    /// <summary>
-    ///	repeated reward_info rewardList = 1;
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> ShowTypeList {
@@ -115,6 +125,7 @@ namespace Reward {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!rewardList_.Equals(other.rewardList_)) return false;
       if(!showTypeList_.Equals(other.showTypeList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -123,6 +134,7 @@ namespace Reward {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= rewardList_.GetHashCode();
       hash ^= showTypeList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -142,6 +154,7 @@ namespace Reward {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      rewardList_.WriteTo(output, _repeated_rewardList_codec);
       showTypeList_.WriteTo(output, _repeated_showTypeList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -153,6 +166,7 @@ namespace Reward {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      rewardList_.WriteTo(ref output, _repeated_rewardList_codec);
       showTypeList_.WriteTo(ref output, _repeated_showTypeList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,6 +178,7 @@ namespace Reward {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += rewardList_.CalculateSize(_repeated_rewardList_codec);
       size += showTypeList_.CalculateSize(_repeated_showTypeList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -177,6 +192,7 @@ namespace Reward {
       if (other == null) {
         return;
       }
+      rewardList_.Add(other.rewardList_);
       showTypeList_.Add(other.showTypeList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -197,6 +213,10 @@ namespace Reward {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            rewardList_.AddEntriesFrom(input, _repeated_rewardList_codec);
+            break;
+          }
           case 18:
           case 16: {
             showTypeList_.AddEntriesFrom(input, _repeated_showTypeList_codec);
@@ -221,6 +241,10 @@ namespace Reward {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            rewardList_.AddEntriesFrom(ref input, _repeated_rewardList_codec);
+            break;
+          }
           case 18:
           case 16: {
             showTypeList_.AddEntriesFrom(ref input, _repeated_showTypeList_codec);
