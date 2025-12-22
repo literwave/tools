@@ -27,17 +27,18 @@ namespace User {
             "Cgp1c2VyLnByb3RvEgRVc2VyGgxjb21tb24ucHJvdG8iFAoSYzJzX3VzZXJf",
             "YmFzZV9pbmZvIlQKEnMyY191c2VyX2Jhc2VfaW5mbxIMCgRuYW1lGAEgASgJ",
             "EhAKCGhlYWRJY29uGAIgASgFEgsKA3NleBgDIAEoBRIRCgliaXJ0aFRpbWUY",
-            "BCABKAUiIgoTYzJzX2NoYW5nZV91c2VyX3NleBILCgNzZXgYASABKAUiIgoT",
-            "czJjX2NoYW5nZV91c2VyX3NleBILCgNzZXgYASABKAUiEgoQYzJzX3JlcV91",
-            "c2VyX3JlcyI4ChBzMmNfcmVxX3VzZXJfcmVzEiQKB3Jlc0xpc3QYASADKAsy",
-            "Ey5Db21tb24uY29tbW9uX2luZm9iBnByb3RvMw=="));
+            "BCABKAUiLAoPYzJzX3VzZXJfY3JlYXRlEgwKBG5hbWUYASABKAkSCwoDc2V4",
+            "GAIgASgFIiwKD3MyY191c2VyX2NyZWF0ZRIMCgRuYW1lGAEgASgJEgsKA3Nl",
+            "eBgCIAEoBSISChBjMnNfcmVxX3VzZXJfcmVzIjgKEHMyY19yZXFfdXNlcl9y",
+            "ZXMSJAoHcmVzTGlzdBgBIAMoCzITLkNvbW1vbi5jb21tb25faW5mb2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::User.c2s_user_base_info), global::User.c2s_user_base_info.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_user_base_info), global::User.s2c_user_base_info.Parser, new[]{ "Name", "HeadIcon", "Sex", "BirthTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::User.c2s_change_user_sex), global::User.c2s_change_user_sex.Parser, new[]{ "Sex" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_change_user_sex), global::User.s2c_change_user_sex.Parser, new[]{ "Sex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::User.c2s_user_create), global::User.c2s_user_create.Parser, new[]{ "Name", "Sex" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_user_create), global::User.s2c_user_create.Parser, new[]{ "Name", "Sex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::User.c2s_req_user_res), global::User.c2s_req_user_res.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_req_user_res), global::User.s2c_req_user_res.Parser, new[]{ "ResList" }, null, null, null, null)
           }));
@@ -517,16 +518,16 @@ namespace User {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class c2s_change_user_sex : pb::IMessage<c2s_change_user_sex>
+  public sealed partial class c2s_user_create : pb::IMessage<c2s_user_create>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<c2s_change_user_sex> _parser = new pb::MessageParser<c2s_change_user_sex>(() => new c2s_change_user_sex());
+    private static readonly pb::MessageParser<c2s_user_create> _parser = new pb::MessageParser<c2s_user_create>(() => new c2s_user_create());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<c2s_change_user_sex> Parser { get { return _parser; } }
+    public static pb::MessageParser<c2s_user_create> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -542,7 +543,7 @@ namespace User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public c2s_change_user_sex() {
+    public c2s_user_create() {
       OnConstruction();
     }
 
@@ -550,19 +551,32 @@ namespace User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public c2s_change_user_sex(c2s_change_user_sex other) : this() {
+    public c2s_user_create(c2s_user_create other) : this() {
+      name_ = other.name_;
       sex_ = other.sex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public c2s_change_user_sex Clone() {
-      return new c2s_change_user_sex(this);
+    public c2s_user_create Clone() {
+      return new c2s_user_create(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "sex" field.</summary>
-    public const int SexFieldNumber = 1;
+    public const int SexFieldNumber = 2;
     private int sex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -576,18 +590,19 @@ namespace User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as c2s_change_user_sex);
+      return Equals(other as c2s_user_create);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(c2s_change_user_sex other) {
+    public bool Equals(c2s_user_create other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
       if (Sex != other.Sex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -596,6 +611,7 @@ namespace User {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Sex != 0) hash ^= Sex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -615,8 +631,12 @@ namespace User {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Sex != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt32(Sex);
       }
       if (_unknownFields != null) {
@@ -629,8 +649,12 @@ namespace User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Sex != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt32(Sex);
       }
       if (_unknownFields != null) {
@@ -643,6 +667,9 @@ namespace User {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (Sex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Sex);
       }
@@ -654,9 +681,12 @@ namespace User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(c2s_change_user_sex other) {
+    public void MergeFrom(c2s_user_create other) {
       if (other == null) {
         return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       if (other.Sex != 0) {
         Sex = other.Sex;
@@ -680,7 +710,11 @@ namespace User {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
             Sex = input.ReadInt32();
             break;
           }
@@ -703,7 +737,11 @@ namespace User {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
             Sex = input.ReadInt32();
             break;
           }
@@ -715,16 +753,16 @@ namespace User {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class s2c_change_user_sex : pb::IMessage<s2c_change_user_sex>
+  public sealed partial class s2c_user_create : pb::IMessage<s2c_user_create>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<s2c_change_user_sex> _parser = new pb::MessageParser<s2c_change_user_sex>(() => new s2c_change_user_sex());
+    private static readonly pb::MessageParser<s2c_user_create> _parser = new pb::MessageParser<s2c_user_create>(() => new s2c_user_create());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<s2c_change_user_sex> Parser { get { return _parser; } }
+    public static pb::MessageParser<s2c_user_create> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -740,7 +778,7 @@ namespace User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public s2c_change_user_sex() {
+    public s2c_user_create() {
       OnConstruction();
     }
 
@@ -748,19 +786,32 @@ namespace User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public s2c_change_user_sex(s2c_change_user_sex other) : this() {
+    public s2c_user_create(s2c_user_create other) : this() {
+      name_ = other.name_;
       sex_ = other.sex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public s2c_change_user_sex Clone() {
-      return new s2c_change_user_sex(this);
+    public s2c_user_create Clone() {
+      return new s2c_user_create(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "sex" field.</summary>
-    public const int SexFieldNumber = 1;
+    public const int SexFieldNumber = 2;
     private int sex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -774,18 +825,19 @@ namespace User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as s2c_change_user_sex);
+      return Equals(other as s2c_user_create);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(s2c_change_user_sex other) {
+    public bool Equals(s2c_user_create other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
       if (Sex != other.Sex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -794,6 +846,7 @@ namespace User {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Sex != 0) hash ^= Sex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -813,8 +866,12 @@ namespace User {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Sex != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt32(Sex);
       }
       if (_unknownFields != null) {
@@ -827,8 +884,12 @@ namespace User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
       if (Sex != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt32(Sex);
       }
       if (_unknownFields != null) {
@@ -841,6 +902,9 @@ namespace User {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (Sex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Sex);
       }
@@ -852,9 +916,12 @@ namespace User {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(s2c_change_user_sex other) {
+    public void MergeFrom(s2c_user_create other) {
       if (other == null) {
         return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       if (other.Sex != 0) {
         Sex = other.Sex;
@@ -878,7 +945,11 @@ namespace User {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
             Sex = input.ReadInt32();
             break;
           }
@@ -901,7 +972,11 @@ namespace User {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
             Sex = input.ReadInt32();
             break;
           }
