@@ -6,7 +6,7 @@ import "common.proto";
 
 // 奖励
 message s2c_show_reward {
-	repeated Common.reward_info rewardList = 1;
+	repeated Common.p_reward_info rewardList = 1;
 	repeated int32 showTypeList = 2;
 }
 

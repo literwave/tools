@@ -29,9 +29,9 @@ namespace User {
             "EhAKCGhlYWRJY29uGAIgASgFEgsKA3NleBgDIAEoBRIRCgliaXJ0aFRpbWUY",
             "BCABKAUiLAoPYzJzX3VzZXJfY3JlYXRlEgwKBG5hbWUYASABKAkSCwoDc2V4",
             "GAIgASgFIiwKD3MyY191c2VyX2NyZWF0ZRIMCgRuYW1lGAEgASgJEgsKA3Nl",
-            "eBgCIAEoBSISChBjMnNfcmVxX3VzZXJfcmVzIjgKEHMyY19yZXFfdXNlcl9y",
-            "ZXMSJAoHcmVzTGlzdBgBIAMoCzITLkNvbW1vbi5jb21tb25faW5mb2IGcHJv",
-            "dG8z"));
+            "eBgCIAEoBSISChBjMnNfcmVxX3VzZXJfcmVzIjoKEHMyY19yZXFfdXNlcl9y",
+            "ZXMSJgoHcmVzTGlzdBgBIAMoCzIVLkNvbW1vbi5wX2NvbW1vbl9pbmZvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1195,12 +1195,12 @@ namespace User {
 
     /// <summary>Field number for the "resList" field.</summary>
     public const int ResListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Common.common_info> _repeated_resList_codec
-        = pb::FieldCodec.ForMessage(10, global::Common.common_info.Parser);
-    private readonly pbc::RepeatedField<global::Common.common_info> resList_ = new pbc::RepeatedField<global::Common.common_info>();
+    private static readonly pb::FieldCodec<global::Common.p_common_info> _repeated_resList_codec
+        = pb::FieldCodec.ForMessage(10, global::Common.p_common_info.Parser);
+    private readonly pbc::RepeatedField<global::Common.p_common_info> resList_ = new pbc::RepeatedField<global::Common.p_common_info>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Common.common_info> ResList {
+    public pbc::RepeatedField<global::Common.p_common_info> ResList {
       get { return resList_; }
     }
 

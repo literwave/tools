@@ -24,10 +24,10 @@ namespace Reward {
     static RewardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxyZXdhcmQucHJvdG8SBlJld2FyZBoMY29tbW9uLnByb3RvIlAKD3MyY19z",
-            "aG93X3Jld2FyZBInCgpyZXdhcmRMaXN0GAEgAygLMhMuQ29tbW9uLnJld2Fy",
-            "ZF9pbmZvEhQKDHNob3dUeXBlTGlzdBgCIAMoBSIoChVzMmNfc3luY191c2Vy",
-            "X2RpYW1vbmQSDwoHZGlhbW9uZBgBIAEoBWIGcHJvdG8z"));
+            "CgxyZXdhcmQucHJvdG8SBlJld2FyZBoMY29tbW9uLnByb3RvIlIKD3MyY19z",
+            "aG93X3Jld2FyZBIpCgpyZXdhcmRMaXN0GAEgAygLMhUuQ29tbW9uLnBfcmV3",
+            "YXJkX2luZm8SFAoMc2hvd1R5cGVMaXN0GAIgAygFIigKFXMyY19zeW5jX3Vz",
+            "ZXJfZGlhbW9uZBIPCgdkaWFtb25kGAEgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -90,12 +90,12 @@ namespace Reward {
 
     /// <summary>Field number for the "rewardList" field.</summary>
     public const int RewardListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Common.reward_info> _repeated_rewardList_codec
-        = pb::FieldCodec.ForMessage(10, global::Common.reward_info.Parser);
-    private readonly pbc::RepeatedField<global::Common.reward_info> rewardList_ = new pbc::RepeatedField<global::Common.reward_info>();
+    private static readonly pb::FieldCodec<global::Common.p_reward_info> _repeated_rewardList_codec
+        = pb::FieldCodec.ForMessage(10, global::Common.p_reward_info.Parser);
+    private readonly pbc::RepeatedField<global::Common.p_reward_info> rewardList_ = new pbc::RepeatedField<global::Common.p_reward_info>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Common.reward_info> RewardList {
+    public pbc::RepeatedField<global::Common.p_reward_info> RewardList {
       get { return rewardList_; }
     }
 

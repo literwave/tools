@@ -1,5 +1,5 @@
 
-ý
+ÿ
 
 user.protoUsercommon.proto"
 c2s_user_base_info"t
@@ -14,6 +14,6 @@ user.protoUsercommon.proto"
 s2c_user_create
 name (	Rname
 sex (Rsex"
-c2s_req_user_res"A
-s2c_req_user_res-
-resList (2.Common.common_infoRresListbproto3
+c2s_req_user_res"C
+s2c_req_user_res/
+resList (2.Common.p_common_infoRresListbproto3

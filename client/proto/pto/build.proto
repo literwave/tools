@@ -1,7 +1,6 @@
 syntax="proto3";
 
 package Build;
-// 聊天相关
 
 message s2c_req_all_build_end {
 }

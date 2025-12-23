@@ -111,8 +111,10 @@ class parseFile():
 					for k, v in difine.items():
 						for kk, vv in v.items():
 							self._nameToId[kk] = vv
-							self._startId = max(int(vv), self._startId)
 							self._idToMod[vv] = k
+							# After loading all existing IDs, set startId to max ID + 1
+							if self._nameToId:
+								self._startId = max(self._nameToId.values()) + 1
 		
 		# 确保目标目录存在
 		client_pto_dir = "../client/proto/pto/"

@@ -28,5 +28,5 @@ message c2s_req_user_res {
 }
 
 message s2c_req_user_res {
-    repeated Common.common_info resList = 1;
+    repeated Common.p_common_info resList = 1;
 }
