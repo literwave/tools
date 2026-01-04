@@ -7,6 +7,7 @@ Note:
 '''
 import sys
 import io
+import ast
 
 def _force_gbk(stream):
     try:
@@ -31,6 +32,7 @@ import os
 import getopt
 import xlrd
 import json
+import luadata
 
 KIND_NORMAL = "normal"
 KIND_GLOBAL = "global"
@@ -40,7 +42,6 @@ READ_FILE_TYPE = {".xlsx"}
 TARGET_FILE_TYPE = {
     "j": ["json"],
     "l": ["lua"],
-    "jl":["json", "lua"],
 }
 TARGET_FILE_USE = {"c", "s"}
 TAGET_FILE_HEADN_INFO = {
@@ -63,7 +64,7 @@ FORMAT_FUNC = {
     "arrstr": lambda x: [i.strip() for i in x.split(',')],
     "array": lambda x: [int(i.strip()) for i in x.split(',')],
     "list": lambda x: list(eval(x)),
-    "table": lambda x: PREFIX + str(x),
+    "table": lambda x: x
 }
 
 FORMAT_DEFAULT_VALUE = {
@@ -84,7 +85,7 @@ def toLua(dealInfoMap):
     return outStr
 
 def toJson(dealInfoMap):
-    return json.dumps(dealInfoMap, sort_keys=True, indent=4, ensure_ascii=False)
+    return json.dumps(dealInfoMap, ensure_ascii=False, indent=4)
 
 
 SUPPORT_TARGET_TYPE = {
@@ -347,19 +348,13 @@ class dealExcelInfo():
                 print("dir: {0} at {1}, skip row {2} (first column empty)".format(self.genConfig.excelPathFile, sheet.name,
                                                                      rowIndex + 1))
                 continue
-            print("sheet.ncols", sheet.ncols)
-            print(self.saveColInfoList)
             for colIndex in range(1, sheet.ncols):
-                print("colIndex: ", colIndex)
-                print("self.saveColInfoList[colIndex][2]", self.saveColInfoList[colIndex][2])
                 if not self.saveColInfoList[colIndex][2]:
                     continue
                 value = self.getValue(row, colIndex)
                 name = self.saveColInfoList[colIndex][1]
                 if not self.dealInfoMap.get(self.getValue(row, 0)):
                     self.dealInfoMap[self.getValue(row, 0)] = dict()
-                print("value = self.getValue(row, colIndex)", value)
-                print("name", name)
                 if value:
                     self.dealInfoMap[self.getValue(row, 0)][name] = value
 
@@ -370,8 +365,13 @@ class dealExcelInfo():
         if name and value:
             if name =="num":
                 print(FORMAT_FUNC[dataType](value))
-            print(colIndex, row, dataType, name, value)
             formatFunc = FORMAT_FUNC[dataType]
+            if dataType == "table":
+                if self.genConfig.fileType == "l":
+                    return PREFIX + str(value)
+                if self.genConfig.fileType == "j":
+                    data = luadata.unserialize(str(value))
+                    return data
             return formatFunc(value)
         if colIndex == 0:
             return None
@@ -387,8 +387,8 @@ class dealExcelInfo():
             # save to file
             targetFile = self.genConfig.targetDir + '/' + sheet.name + '.' + fileType
             print("test", targetFile)
-            print("outStr: ", outStr)
-            print("self.dealInfoMap: ", self.dealInfoMap)
+            # print("outStr: ", outStr)
+            # print("self.dealInfoMap: ", self.dealInfoMap)
             with open(targetFile, 'w') as f:
                 f.write(outStr + "\n")
 

@@ -1,0 +1,107 @@
+{
+    "1001": {
+        "HeroId": 1001,
+        "Resources": "1001.0",
+        "Sort": 1
+    },
+    "1002": {
+        "HeroId": 1002,
+        "Resources": "1002.0",
+        "Sort": 2
+    },
+    "1003": {
+        "HeroId": 1003,
+        "Resources": "1003.0",
+        "Sort": 3
+    },
+    "1004": {
+        "HeroId": 1004,
+        "Resources": "1004.0",
+        "Sort": 4
+    },
+    "1005": {
+        "HeroId": 1005,
+        "Resources": "1005.0",
+        "Sort": 5
+    },
+    "1006": {
+        "HeroId": 1006,
+        "Resources": "1006.0",
+        "Sort": 6
+    },
+    "1007": {
+        "HeroId": 1007,
+        "Resources": "1007.0",
+        "Sort": 7
+    },
+    "1008": {
+        "HeroId": 1008,
+        "Resources": "1008.0",
+        "Sort": 8
+    },
+    "1009": {
+        "HeroId": 1009,
+        "Resources": "1009.0",
+        "Sort": 9
+    },
+    "1010": {
+        "HeroId": 1010,
+        "Resources": "1010.0",
+        "Sort": 10
+    },
+    "1011": {
+        "HeroId": 1011,
+        "Resources": "1011.0",
+        "Sort": 11
+    },
+    "1012": {
+        "HeroId": 1012,
+        "Resources": "1012.0",
+        "Sort": 12
+    },
+    "1013": {
+        "HeroId": 1013,
+        "Resources": "1013.0",
+        "Sort": 13
+    },
+    "1014": {
+        "HeroId": 1014,
+        "Resources": "1014.0",
+        "Sort": 14
+    },
+    "1015": {
+        "HeroId": 1015,
+        "Resources": "1015.0",
+        "Sort": 15
+    },
+    "1016": {
+        "HeroId": 1016,
+        "Resources": "1016.0",
+        "Sort": 16
+    },
+    "1017": {
+        "HeroId": 1017,
+        "Resources": "1017.0",
+        "Sort": 17
+    },
+    "1018": {
+        "HeroId": 1018,
+        "Resources": "1018.0",
+        "Sort": 18
+    },
+    "1019": {
+        "HeroId": 1019,
+        "Resources": "1019.0",
+        "Sort": 19
+    },
+    "1020": {
+        "HeroId": 1020,
+        "Resources": "1020.0",
+        "Sort": 20
+    },
+    "1021": {
+        "HeroId": 1021,
+        "Resources": "1021.0",
+        "Sort": 21
+    }
+}
