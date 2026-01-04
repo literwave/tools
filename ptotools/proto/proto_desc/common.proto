@@ -20,5 +20,5 @@ message p_hero_base_info {
 	int32 star = 4;
 	bool newTag = 5;
 	int32 state = 6;
-	repeated p_common_info skillList =7; 
+	repeated Common.p_common_info skillList =7; 
 }
