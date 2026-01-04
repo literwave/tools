@@ -29,5 +29,31 @@ if errorlevel 1 (
 )
 
 echo All protocol files generated successfully.
+pause
+
+echo Committing and pushing changes to Git...
+git add .
+if errorlevel 1 (
+    echo Failed to run 'git add .'
+    pause
+    exit /b 1
+)
+
+git commit -m "pto"
+if errorlevel 1 (
+    echo Failed to run 'git commit -m "pto"'
+    pause
+    exit /b 1
+)
+
+git push -u origin master
+if errorlevel 1 (
+    echo Failed to run 'git push -u origin master'
+    pause
+    exit /b 1
+)
+
+echo Git operations completed successfully.
+
 popd
 pause

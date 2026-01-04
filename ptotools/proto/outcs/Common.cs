@@ -27,14 +27,16 @@ namespace Common {
             "Cgxjb21tb24ucHJvdG8SBkNvbW1vbiJICg1wX3Jld2FyZF9pbmZvEhIKCnJl",
             "d2FyZFR5cGUYASABKAUSEAoIaXRlbVR5cGUYAiABKAUSEQoJaXRlbUNvdW50",
             "GAMgASgFIiUKDXBfY29tbW9uX2luZm8SCQoBaxgBIAEoBRIJCgF2GAIgASgF",
-            "Ik4KEHBfaGVyb19iYXNlX2luZm8SEAoIaGVyb1R5cGUYASABKAUSCgoCbHYY",
-            "AiABKAUSDAoEc3RhchgDIAEoBRIOCgZuZXdUYWcYBCABKAhiBnByb3RvMw=="));
+            "IoUBChBwX2hlcm9fYmFzZV9pbmZvEhAKCGhlcm9UeXBlGAEgASgFEgsKA2V4",
+            "cBgCIAEoBRIKCgJsdhgDIAEoBRIMCgRzdGFyGAQgASgFEg4KBm5ld1RhZxgF",
+            "IAEoCBIoCglza2lsbExpc3QYBiADKAsyFS5Db21tb24ucF9jb21tb25faW5m",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_reward_info), global::Common.p_reward_info.Parser, new[]{ "RewardType", "ItemType", "ItemCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_common_info), global::Common.p_common_info.Parser, new[]{ "K", "V" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_hero_base_info), global::Common.p_hero_base_info.Parser, new[]{ "HeroType", "Lv", "Star", "NewTag" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_hero_base_info), global::Common.p_hero_base_info.Parser, new[]{ "HeroType", "Exp", "Lv", "Star", "NewTag", "SkillList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -584,9 +586,11 @@ namespace Common {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public p_hero_base_info(p_hero_base_info other) : this() {
       heroType_ = other.heroType_;
+      exp_ = other.exp_;
       lv_ = other.lv_;
       star_ = other.star_;
       newTag_ = other.newTag_;
+      skillList_ = other.skillList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -608,8 +612,20 @@ namespace Common {
       }
     }
 
+    /// <summary>Field number for the "exp" field.</summary>
+    public const int ExpFieldNumber = 2;
+    private int exp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Exp {
+      get { return exp_; }
+      set {
+        exp_ = value;
+      }
+    }
+
     /// <summary>Field number for the "lv" field.</summary>
-    public const int LvFieldNumber = 2;
+    public const int LvFieldNumber = 3;
     private int lv_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -621,7 +637,7 @@ namespace Common {
     }
 
     /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 3;
+    public const int StarFieldNumber = 4;
     private int star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -633,7 +649,7 @@ namespace Common {
     }
 
     /// <summary>Field number for the "newTag" field.</summary>
-    public const int NewTagFieldNumber = 4;
+    public const int NewTagFieldNumber = 5;
     private bool newTag_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -642,6 +658,17 @@ namespace Common {
       set {
         newTag_ = value;
       }
+    }
+
+    /// <summary>Field number for the "skillList" field.</summary>
+    public const int SkillListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Common.p_common_info> _repeated_skillList_codec
+        = pb::FieldCodec.ForMessage(50, global::Common.p_common_info.Parser);
+    private readonly pbc::RepeatedField<global::Common.p_common_info> skillList_ = new pbc::RepeatedField<global::Common.p_common_info>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Common.p_common_info> SkillList {
+      get { return skillList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -660,9 +687,11 @@ namespace Common {
         return true;
       }
       if (HeroType != other.HeroType) return false;
+      if (Exp != other.Exp) return false;
       if (Lv != other.Lv) return false;
       if (Star != other.Star) return false;
       if (NewTag != other.NewTag) return false;
+      if(!skillList_.Equals(other.skillList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -671,9 +700,11 @@ namespace Common {
     public override int GetHashCode() {
       int hash = 1;
       if (HeroType != 0) hash ^= HeroType.GetHashCode();
+      if (Exp != 0) hash ^= Exp.GetHashCode();
       if (Lv != 0) hash ^= Lv.GetHashCode();
       if (Star != 0) hash ^= Star.GetHashCode();
       if (NewTag != false) hash ^= NewTag.GetHashCode();
+      hash ^= skillList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -696,18 +727,23 @@ namespace Common {
         output.WriteRawTag(8);
         output.WriteInt32(HeroType);
       }
-      if (Lv != 0) {
+      if (Exp != 0) {
         output.WriteRawTag(16);
+        output.WriteInt32(Exp);
+      }
+      if (Lv != 0) {
+        output.WriteRawTag(24);
         output.WriteInt32(Lv);
       }
       if (Star != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt32(Star);
       }
       if (NewTag != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(NewTag);
       }
+      skillList_.WriteTo(output, _repeated_skillList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -722,18 +758,23 @@ namespace Common {
         output.WriteRawTag(8);
         output.WriteInt32(HeroType);
       }
-      if (Lv != 0) {
+      if (Exp != 0) {
         output.WriteRawTag(16);
+        output.WriteInt32(Exp);
+      }
+      if (Lv != 0) {
+        output.WriteRawTag(24);
         output.WriteInt32(Lv);
       }
       if (Star != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt32(Star);
       }
       if (NewTag != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(NewTag);
       }
+      skillList_.WriteTo(ref output, _repeated_skillList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -747,6 +788,9 @@ namespace Common {
       if (HeroType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(HeroType);
       }
+      if (Exp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Exp);
+      }
       if (Lv != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Lv);
       }
@@ -756,6 +800,7 @@ namespace Common {
       if (NewTag != false) {
         size += 1 + 1;
       }
+      size += skillList_.CalculateSize(_repeated_skillList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -771,6 +816,9 @@ namespace Common {
       if (other.HeroType != 0) {
         HeroType = other.HeroType;
       }
+      if (other.Exp != 0) {
+        Exp = other.Exp;
+      }
       if (other.Lv != 0) {
         Lv = other.Lv;
       }
@@ -780,6 +828,7 @@ namespace Common {
       if (other.NewTag != false) {
         NewTag = other.NewTag;
       }
+      skillList_.Add(other.skillList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -804,15 +853,23 @@ namespace Common {
             break;
           }
           case 16: {
-            Lv = input.ReadInt32();
+            Exp = input.ReadInt32();
             break;
           }
           case 24: {
-            Star = input.ReadInt32();
+            Lv = input.ReadInt32();
             break;
           }
           case 32: {
+            Star = input.ReadInt32();
+            break;
+          }
+          case 40: {
             NewTag = input.ReadBool();
+            break;
+          }
+          case 50: {
+            skillList_.AddEntriesFrom(input, _repeated_skillList_codec);
             break;
           }
         }
@@ -839,15 +896,23 @@ namespace Common {
             break;
           }
           case 16: {
-            Lv = input.ReadInt32();
+            Exp = input.ReadInt32();
             break;
           }
           case 24: {
-            Star = input.ReadInt32();
+            Lv = input.ReadInt32();
             break;
           }
           case 32: {
+            Star = input.ReadInt32();
+            break;
+          }
+          case 40: {
             NewTag = input.ReadBool();
+            break;
+          }
+          case 50: {
+            skillList_.AddEntriesFrom(ref input, _repeated_skillList_codec);
             break;
           }
         }
