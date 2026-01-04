@@ -24,16 +24,15 @@ namespace Hero {
     static HeroReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgpoZXJvLnByb3RvEgRIZXJvGgxjb21tb24ucHJvdG8iVQoXczJjX3N5bmNf",
-            "aGVyb19iYXNlX2luZm8SEAoIaGVyb1R5cGUYASABKAUSCgoCbHYYAiABKAUS",
-            "DAoEc3RhchgDIAEoBRIOCgZuZXdUYWcYBCABKAgiHAoaYzJzX3JlcV9hbGxf",
-            "aGVyb19iYXNlX2luZm8iTAoaczJjX3JlcV9hbGxfaGVyb19iYXNlX2luZm8S",
-            "LgoMaGVyb0luZm9MaXN0GAEgAygLMhguQ29tbW9uLnBfaGVyb19iYXNlX2lu",
-            "Zm9iBnByb3RvMw=="));
+            "CgpoZXJvLnByb3RvEgRIZXJvGgxjb21tb24ucHJvdG8iRQoXczJjX3N5bmNf",
+            "aGVyb19iYXNlX2luZm8SKgoIaGVyb0luZm8YASABKAsyGC5Db21tb24ucF9o",
+            "ZXJvX2Jhc2VfaW5mbyIcChpjMnNfcmVxX2FsbF9oZXJvX2Jhc2VfaW5mbyJM",
+            "ChpzMmNfcmVxX2FsbF9oZXJvX2Jhc2VfaW5mbxIuCgxoZXJvSW5mb0xpc3QY",
+            "ASADKAsyGC5Db21tb24ucF9oZXJvX2Jhc2VfaW5mb2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Hero.s2c_sync_hero_base_info), global::Hero.s2c_sync_hero_base_info.Parser, new[]{ "HeroType", "Lv", "Star", "NewTag" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Hero.s2c_sync_hero_base_info), global::Hero.s2c_sync_hero_base_info.Parser, new[]{ "HeroInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Hero.c2s_req_all_hero_base_info), global::Hero.c2s_req_all_hero_base_info.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Hero.s2c_req_all_hero_base_info), global::Hero.s2c_req_all_hero_base_info.Parser, new[]{ "HeroInfoList" }, null, null, null, null)
           }));
@@ -80,10 +79,7 @@ namespace Hero {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public s2c_sync_hero_base_info(s2c_sync_hero_base_info other) : this() {
-      heroType_ = other.heroType_;
-      lv_ = other.lv_;
-      star_ = other.star_;
-      newTag_ = other.newTag_;
+      heroInfo_ = other.heroInfo_ != null ? other.heroInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,51 +89,15 @@ namespace Hero {
       return new s2c_sync_hero_base_info(this);
     }
 
-    /// <summary>Field number for the "heroType" field.</summary>
-    public const int HeroTypeFieldNumber = 1;
-    private int heroType_;
+    /// <summary>Field number for the "heroInfo" field.</summary>
+    public const int HeroInfoFieldNumber = 1;
+    private global::Common.p_hero_base_info heroInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int HeroType {
-      get { return heroType_; }
+    public global::Common.p_hero_base_info HeroInfo {
+      get { return heroInfo_; }
       set {
-        heroType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "lv" field.</summary>
-    public const int LvFieldNumber = 2;
-    private int lv_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Lv {
-      get { return lv_; }
-      set {
-        lv_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 3;
-    private int star_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Star {
-      get { return star_; }
-      set {
-        star_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "newTag" field.</summary>
-    public const int NewTagFieldNumber = 4;
-    private bool newTag_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NewTag {
-      get { return newTag_; }
-      set {
-        newTag_ = value;
+        heroInfo_ = value;
       }
     }
 
@@ -156,10 +116,7 @@ namespace Hero {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HeroType != other.HeroType) return false;
-      if (Lv != other.Lv) return false;
-      if (Star != other.Star) return false;
-      if (NewTag != other.NewTag) return false;
+      if (!object.Equals(HeroInfo, other.HeroInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -167,10 +124,7 @@ namespace Hero {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HeroType != 0) hash ^= HeroType.GetHashCode();
-      if (Lv != 0) hash ^= Lv.GetHashCode();
-      if (Star != 0) hash ^= Star.GetHashCode();
-      if (NewTag != false) hash ^= NewTag.GetHashCode();
+      if (heroInfo_ != null) hash ^= HeroInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -189,21 +143,9 @@ namespace Hero {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HeroType != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(HeroType);
-      }
-      if (Lv != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Lv);
-      }
-      if (Star != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Star);
-      }
-      if (NewTag != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(NewTag);
+      if (heroInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(HeroInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -215,21 +157,9 @@ namespace Hero {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HeroType != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(HeroType);
-      }
-      if (Lv != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Lv);
-      }
-      if (Star != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Star);
-      }
-      if (NewTag != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(NewTag);
+      if (heroInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(HeroInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -241,17 +171,8 @@ namespace Hero {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HeroType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(HeroType);
-      }
-      if (Lv != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Lv);
-      }
-      if (Star != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Star);
-      }
-      if (NewTag != false) {
-        size += 1 + 1;
+      if (heroInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HeroInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -265,17 +186,11 @@ namespace Hero {
       if (other == null) {
         return;
       }
-      if (other.HeroType != 0) {
-        HeroType = other.HeroType;
-      }
-      if (other.Lv != 0) {
-        Lv = other.Lv;
-      }
-      if (other.Star != 0) {
-        Star = other.Star;
-      }
-      if (other.NewTag != false) {
-        NewTag = other.NewTag;
+      if (other.heroInfo_ != null) {
+        if (heroInfo_ == null) {
+          HeroInfo = new global::Common.p_hero_base_info();
+        }
+        HeroInfo.MergeFrom(other.HeroInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -296,20 +211,11 @@ namespace Hero {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            HeroType = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Lv = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            Star = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            NewTag = input.ReadBool();
+          case 10: {
+            if (heroInfo_ == null) {
+              HeroInfo = new global::Common.p_hero_base_info();
+            }
+            input.ReadMessage(HeroInfo);
             break;
           }
         }
@@ -331,20 +237,11 @@ namespace Hero {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            HeroType = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            Lv = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            Star = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            NewTag = input.ReadBool();
+          case 10: {
+            if (heroInfo_ == null) {
+              HeroInfo = new global::Common.p_hero_base_info();
+            }
+            input.ReadMessage(HeroInfo);
             break;
           }
         }
