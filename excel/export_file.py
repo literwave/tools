@@ -389,7 +389,7 @@ class dealExcelInfo():
             print("test", targetFile)
             # print("outStr: ", outStr)
             # print("self.dealInfoMap: ", self.dealInfoMap)
-            with open(targetFile, 'w') as f:
+            with open(targetFile, 'w', encoding='utf-8') as f:
                 f.write(outStr + "\n")
 
     def outNote(self, sheet, fileType):
