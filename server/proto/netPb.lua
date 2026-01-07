@@ -36,6 +36,12 @@ local define = {
     Reward = {
         s2c_show_reward = 272,
         s2c_sync_user_diamond = 273
+    },
+    Lottery = {
+        c2s_req_user_lottery_info = 280,
+        s2c_req_user_lottery_info = 281,
+        c2s_user_lottery = 282,
+        s2c_user_lottery = 283
     }
 }
 ID_TO_PACK_NAME = {}
