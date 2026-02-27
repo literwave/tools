@@ -11,7 +11,14 @@ return {
         ["Overlap"] = 1
     },
     [2] = {
-        ["Icon"] = 1,
+        ["Icon"] = 2,
+        ["BuyDiamond"] = 10,
+        ["useParams"] = {},
+        ["Kind"] = 1,
+        ["Overlap"] = 1
+    },
+    [1001] = {
+        ["Icon"] = 1001,
         ["BuyDiamond"] = 10,
         ["useParams"] = {},
         ["Kind"] = 1,
