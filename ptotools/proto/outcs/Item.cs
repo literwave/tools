@@ -25,7 +25,7 @@ namespace Item {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgppdGVtLnByb3RvEgRJdGVtGgxjb21tb24ucHJvdG8iRwoSczJjX3N5bmNf",
-            "aXRlbV9kYXRhEg4KBml0ZW1JZBgBIAEoBRIQCghpdGVtVHlwZRgCIAEoBRIP",
+            "aXRlbV9kYXRhEg4KBml0ZW1JZBgBIAEoCRIQCghpdGVtVHlwZRgCIAEoBRIP",
             "CgdpdGVtQ250GAMgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
@@ -86,13 +86,13 @@ namespace Item {
 
     /// <summary>Field number for the "itemId" field.</summary>
     public const int ItemIdFieldNumber = 1;
-    private int itemId_;
+    private string itemId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int ItemId {
+    public string ItemId {
       get { return itemId_; }
       set {
-        itemId_ = value;
+        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -145,7 +145,7 @@ namespace Item {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ItemId != 0) hash ^= ItemId.GetHashCode();
+      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
       if (ItemType != 0) hash ^= ItemType.GetHashCode();
       if (ItemCnt != 0) hash ^= ItemCnt.GetHashCode();
       if (_unknownFields != null) {
@@ -166,9 +166,9 @@ namespace Item {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ItemId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(ItemId);
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ItemId);
       }
       if (ItemType != 0) {
         output.WriteRawTag(16);
@@ -188,9 +188,9 @@ namespace Item {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ItemId != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(ItemId);
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ItemId);
       }
       if (ItemType != 0) {
         output.WriteRawTag(16);
@@ -210,8 +210,8 @@ namespace Item {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ItemId);
+      if (ItemId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
       }
       if (ItemType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ItemType);
@@ -231,7 +231,7 @@ namespace Item {
       if (other == null) {
         return;
       }
-      if (other.ItemId != 0) {
+      if (other.ItemId.Length != 0) {
         ItemId = other.ItemId;
       }
       if (other.ItemType != 0) {
@@ -259,8 +259,8 @@ namespace Item {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            ItemId = input.ReadInt32();
+          case 10: {
+            ItemId = input.ReadString();
             break;
           }
           case 16: {
@@ -290,8 +290,8 @@ namespace Item {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            ItemId = input.ReadInt32();
+          case 10: {
+            ItemId = input.ReadString();
             break;
           }
           case 16: {
