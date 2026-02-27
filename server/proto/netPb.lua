@@ -42,6 +42,9 @@ local define = {
         s2c_req_user_lottery_info = 281,
         c2s_user_lottery = 282,
         s2c_user_lottery = 283
+    },
+    Item = {
+        s2c_sync_item_data = 284
     }
 }
 ID_TO_PACK_NAME = {}
