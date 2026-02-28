@@ -31,7 +31,8 @@ local define = {
         s2c_user_base_info = 275,
         c2s_user_create = 276,
         c2s_req_user_res = 277,
-        s2c_req_user_res = 278
+        s2c_req_user_res = 278,
+        s2c_sync_user_res_list = 285
     },
     Reward = {
         s2c_show_reward = 272,

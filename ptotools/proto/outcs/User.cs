@@ -30,8 +30,9 @@ namespace User {
             "BCABKAUiLAoPYzJzX3VzZXJfY3JlYXRlEgwKBG5hbWUYASABKAkSCwoDc2V4",
             "GAIgASgFIiwKD3MyY191c2VyX2NyZWF0ZRIMCgRuYW1lGAEgASgJEgsKA3Nl",
             "eBgCIAEoBSISChBjMnNfcmVxX3VzZXJfcmVzIjoKEHMyY19yZXFfdXNlcl9y",
-            "ZXMSJgoHcmVzTGlzdBgBIAMoCzIVLkNvbW1vbi5wX2NvbW1vbl9pbmZvYgZw",
-            "cm90bzM="));
+            "ZXMSJgoHcmVzTGlzdBgBIAMoCzIVLkNvbW1vbi5wX2NvbW1vbl9pbmZvIkAK",
+            "FnMyY19zeW5jX3VzZXJfcmVzX2xpc3QSJgoHcmVzTGlzdBgBIAMoCzIVLkNv",
+            "bW1vbi5wX2NvbW1vbl9pbmZvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -40,7 +41,8 @@ namespace User {
             new pbr::GeneratedClrTypeInfo(typeof(global::User.c2s_user_create), global::User.c2s_user_create.Parser, new[]{ "Name", "Sex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_user_create), global::User.s2c_user_create.Parser, new[]{ "Name", "Sex" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::User.c2s_req_user_res), global::User.c2s_req_user_res.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_req_user_res), global::User.s2c_req_user_res.Parser, new[]{ "ResList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_req_user_res), global::User.s2c_req_user_res.Parser, new[]{ "ResList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::User.s2c_sync_user_res_list), global::User.s2c_sync_user_res_list.Parser, new[]{ "ResList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1278,6 +1280,193 @@ namespace User {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(s2c_req_user_res other) {
+      if (other == null) {
+        return;
+      }
+      resList_.Add(other.resList_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            resList_.AddEntriesFrom(input, _repeated_resList_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            resList_.AddEntriesFrom(ref input, _repeated_resList_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class s2c_sync_user_res_list : pb::IMessage<s2c_sync_user_res_list>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<s2c_sync_user_res_list> _parser = new pb::MessageParser<s2c_sync_user_res_list>(() => new s2c_sync_user_res_list());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<s2c_sync_user_res_list> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::User.UserReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public s2c_sync_user_res_list() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public s2c_sync_user_res_list(s2c_sync_user_res_list other) : this() {
+      resList_ = other.resList_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public s2c_sync_user_res_list Clone() {
+      return new s2c_sync_user_res_list(this);
+    }
+
+    /// <summary>Field number for the "resList" field.</summary>
+    public const int ResListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Common.p_common_info> _repeated_resList_codec
+        = pb::FieldCodec.ForMessage(10, global::Common.p_common_info.Parser);
+    private readonly pbc::RepeatedField<global::Common.p_common_info> resList_ = new pbc::RepeatedField<global::Common.p_common_info>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Common.p_common_info> ResList {
+      get { return resList_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as s2c_sync_user_res_list);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(s2c_sync_user_res_list other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!resList_.Equals(other.resList_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= resList_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      resList_.WriteTo(output, _repeated_resList_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      resList_.WriteTo(ref output, _repeated_resList_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += resList_.CalculateSize(_repeated_resList_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(s2c_sync_user_res_list other) {
       if (other == null) {
         return;
       }

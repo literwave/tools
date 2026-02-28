@@ -1,5 +1,5 @@
 
-ÿ
+Ê
 
 user.protoUsercommon.proto"
 c2s_user_base_info"t
@@ -16,4 +16,6 @@ user.protoUsercommon.proto"
 sex (Rsex"
 c2s_req_user_res"C
 s2c_req_user_res/
+resList (2.Common.p_common_infoRresList"I
+s2c_sync_user_res_list/
 resList (2.Common.p_common_infoRresListbproto3
