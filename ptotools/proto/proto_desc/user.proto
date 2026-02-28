@@ -38,3 +38,15 @@ message s2c_sync_user_res_list {
 message s2c_sys_notify_by_lanid {
     repeated string tbl = 1;
 }
+
+message s2c_tell_me {
+    string msg = 1;
+}
+
+message c2s_gm_command {
+    string cmd = 1;
+}
+
+message s2c_gm_command_help {
+    repeated Common.p_common_info ret = 1;
+}

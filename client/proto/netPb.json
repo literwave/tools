@@ -34,7 +34,10 @@
    "c2s_req_user_res": 277,
    "s2c_req_user_res": 278,
    "s2c_sync_user_res_list": 285,
-   "s2c_sys_notify_by_lanid": 286
+   "s2c_sys_notify_by_lanid": 286,
+   "s2c_tell_me": 287,
+   "c2s_gm_command": 288,
+   "s2c_gm_command_help": 289
   },
   "Reward": {
    "s2c_show_reward": 272,
