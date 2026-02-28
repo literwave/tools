@@ -32,7 +32,8 @@ local define = {
         c2s_user_create = 276,
         c2s_req_user_res = 277,
         s2c_req_user_res = 278,
-        s2c_sync_user_res_list = 285
+        s2c_sync_user_res_list = 285,
+        s2c_sys_notify_by_lanid = 286
     },
     Reward = {
         s2c_show_reward = 272,

@@ -34,3 +34,7 @@ message s2c_req_user_res {
 message s2c_sync_user_res_list {
     repeated Common.p_common_info resList = 1;
 }
+
+message s2c_sys_notify_by_lanid {
+    repeated string tbl = 1;
+}

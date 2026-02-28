@@ -1,5 +1,5 @@
 
-Ê
+÷
 
 user.protoUsercommon.proto"
 c2s_user_base_info"t
@@ -18,4 +18,6 @@ user.protoUsercommon.proto"
 s2c_req_user_res/
 resList (2.Common.p_common_infoRresList"I
 s2c_sync_user_res_list/
-resList (2.Common.p_common_infoRresListbproto3
+resList (2.Common.p_common_infoRresList"+
+s2c_sys_notify_by_lanid
+tbl (	Rtblbproto3
