@@ -50,6 +50,18 @@ local define = {
     },
     Item = {
         s2c_sync_item_data = 284
+    },
+    Mail = {
+        s2c_del_mail_list = 290,
+        c2s_req_mail_list = 291,
+        s2c_req_mail_list = 292,
+        c2s_req_mail_detail = 293,
+        s2c_req_mail_detail = 294,
+        c2s_del_mail_list = 295,
+        c2s_set_mail_lock = 296,
+        s2c_set_mail_lock = 297,
+        c2s_get_mail_reward = 298,
+        s2c_get_mail_reward = 299
     }
 }
 ID_TO_PACK_NAME = {}

@@ -24,11 +24,11 @@ namespace Item {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgRJdGVtGgxjb21tb24ucHJvdG8iRwoSczJjX3N5bmNf",
-            "aXRlbV9kYXRhEg4KBml0ZW1JZBgBIAEoCRIQCghpdGVtVHlwZRgCIAEoBRIP",
-            "CgdpdGVtQ250GAMgASgFYgZwcm90bzM="));
+            "CgppdGVtLnByb3RvEgRJdGVtIkcKEnMyY19zeW5jX2l0ZW1fZGF0YRIOCgZp",
+            "dGVtSWQYASABKAkSEAoIaXRlbVR5cGUYAiABKAUSDwoHaXRlbUNudBgDIAEo",
+            "BWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Common.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Item.s2c_sync_item_data), global::Item.s2c_sync_item_data.Parser, new[]{ "ItemId", "ItemType", "ItemCnt" }, null, null, null, null)
           }));

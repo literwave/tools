@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package Item;
 
-import "common.proto";
-
 message s2c_sync_item_data {
 	string itemId = 1;
 	int32 itemType = 2;

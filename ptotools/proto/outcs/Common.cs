@@ -27,16 +27,23 @@ namespace Common {
             "Cgxjb21tb24ucHJvdG8SBkNvbW1vbiJICg1wX3Jld2FyZF9pbmZvEhIKCnJl",
             "d2FyZFR5cGUYASABKAUSEAoIaXRlbVR5cGUYAiABKAUSEQoJaXRlbUNvdW50",
             "GAMgASgFIiUKDXBfY29tbW9uX2luZm8SCQoBaxgBIAEoBRIJCgF2GAIgASgF",
-            "IpQBChBwX2hlcm9fYmFzZV9pbmZvEhAKCGhlcm9UeXBlGAEgASgFEgsKA2V4",
-            "cBgCIAEoBRIKCgJsdhgDIAEoBRIMCgRzdGFyGAQgASgFEg4KBm5ld1RhZxgF",
-            "IAEoCBINCgVzdGF0ZRgGIAEoBRIoCglza2lsbExpc3QYByADKAsyFS5Db21t",
-            "b24ucF9jb21tb25faW5mb2IGcHJvdG8z"));
+            "Ii0KFXBfY29tbW9uX2luZm9faW50X3N0chIJCgFrGAEgASgFEgkKAXYYAiAB",
+            "KAkilAEKEHBfaGVyb19iYXNlX2luZm8SEAoIaGVyb1R5cGUYASABKAUSCwoD",
+            "ZXhwGAIgASgFEgoKAmx2GAMgASgFEgwKBHN0YXIYBCABKAUSDgoGbmV3VGFn",
+            "GAUgASgIEg0KBXN0YXRlGAYgASgFEigKCXNraWxsTGlzdBgHIAMoCzIVLkNv",
+            "bW1vbi5wX2NvbW1vbl9pbmZvIqgBCgtwX21haWxfaW5mbxIQCghtYWlsVHlw",
+            "ZRgBIAEoBRIOCgZtYWlsSWQYAiABKAkSDQoFdGl0bGUYAyABKAkSDwoHY29u",
+            "dGVudBgEIAEoCRIOCgZpc1JlYWQYBSABKAgSDgoGaXNMb2NrGAYgASgIEhMK",
+            "C2lzR290UmV3YXJkGAcgASgIEhEKCXN0YXJ0VGltZRgIIAEoBRIPCgdlbmRU",
+            "aW1lGAkgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_reward_info), global::Common.p_reward_info.Parser, new[]{ "RewardType", "ItemType", "ItemCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_common_info), global::Common.p_common_info.Parser, new[]{ "K", "V" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_hero_base_info), global::Common.p_hero_base_info.Parser, new[]{ "HeroType", "Exp", "Lv", "Star", "NewTag", "State", "SkillList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_common_info_int_str), global::Common.p_common_info_int_str.Parser, new[]{ "K", "V" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_hero_base_info), global::Common.p_hero_base_info.Parser, new[]{ "HeroType", "Exp", "Lv", "Star", "NewTag", "State", "SkillList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Common.p_mail_info), global::Common.p_mail_info.Parser, new[]{ "MailType", "MailId", "Title", "Content", "IsRead", "IsLock", "IsGotReward", "StartTime", "EndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -551,6 +558,241 @@ namespace Common {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class p_common_info_int_str : pb::IMessage<p_common_info_int_str>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<p_common_info_int_str> _parser = new pb::MessageParser<p_common_info_int_str>(() => new p_common_info_int_str());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<p_common_info_int_str> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Common.CommonReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public p_common_info_int_str() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public p_common_info_int_str(p_common_info_int_str other) : this() {
+      k_ = other.k_;
+      v_ = other.v_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public p_common_info_int_str Clone() {
+      return new p_common_info_int_str(this);
+    }
+
+    /// <summary>Field number for the "k" field.</summary>
+    public const int KFieldNumber = 1;
+    private int k_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int K {
+      get { return k_; }
+      set {
+        k_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "v" field.</summary>
+    public const int VFieldNumber = 2;
+    private string v_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string V {
+      get { return v_; }
+      set {
+        v_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as p_common_info_int_str);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(p_common_info_int_str other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (K != other.K) return false;
+      if (V != other.V) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (K != 0) hash ^= K.GetHashCode();
+      if (V.Length != 0) hash ^= V.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (K != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(K);
+      }
+      if (V.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(V);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (K != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(K);
+      }
+      if (V.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(V);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (K != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(K);
+      }
+      if (V.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(V);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(p_common_info_int_str other) {
+      if (other == null) {
+        return;
+      }
+      if (other.K != 0) {
+        K = other.K;
+      }
+      if (other.V.Length != 0) {
+        V = other.V;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            K = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            V = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            K = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            V = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class p_hero_base_info : pb::IMessage<p_hero_base_info>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -565,7 +807,7 @@ namespace Common {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Common.CommonReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Common.CommonReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -950,6 +1192,500 @@ namespace Common {
           }
           case 58: {
             skillList_.AddEntriesFrom(ref input, _repeated_skillList_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class p_mail_info : pb::IMessage<p_mail_info>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<p_mail_info> _parser = new pb::MessageParser<p_mail_info>(() => new p_mail_info());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<p_mail_info> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Common.CommonReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public p_mail_info() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public p_mail_info(p_mail_info other) : this() {
+      mailType_ = other.mailType_;
+      mailId_ = other.mailId_;
+      title_ = other.title_;
+      content_ = other.content_;
+      isRead_ = other.isRead_;
+      isLock_ = other.isLock_;
+      isGotReward_ = other.isGotReward_;
+      startTime_ = other.startTime_;
+      endTime_ = other.endTime_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public p_mail_info Clone() {
+      return new p_mail_info(this);
+    }
+
+    /// <summary>Field number for the "mailType" field.</summary>
+    public const int MailTypeFieldNumber = 1;
+    private int mailType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MailType {
+      get { return mailType_; }
+      set {
+        mailType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mailId" field.</summary>
+    public const int MailIdFieldNumber = 2;
+    private string mailId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MailId {
+      get { return mailId_; }
+      set {
+        mailId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 3;
+    private string title_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Title {
+      get { return title_; }
+      set {
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 4;
+    private string content_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Content {
+      get { return content_; }
+      set {
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "isRead" field.</summary>
+    public const int IsReadFieldNumber = 5;
+    private bool isRead_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsRead {
+      get { return isRead_; }
+      set {
+        isRead_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "isLock" field.</summary>
+    public const int IsLockFieldNumber = 6;
+    private bool isLock_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsLock {
+      get { return isLock_; }
+      set {
+        isLock_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "isGotReward" field.</summary>
+    public const int IsGotRewardFieldNumber = 7;
+    private bool isGotReward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsGotReward {
+      get { return isGotReward_; }
+      set {
+        isGotReward_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "startTime" field.</summary>
+    public const int StartTimeFieldNumber = 8;
+    private int startTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "endTime" field.</summary>
+    public const int EndTimeFieldNumber = 9;
+    private int endTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as p_mail_info);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(p_mail_info other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MailType != other.MailType) return false;
+      if (MailId != other.MailId) return false;
+      if (Title != other.Title) return false;
+      if (Content != other.Content) return false;
+      if (IsRead != other.IsRead) return false;
+      if (IsLock != other.IsLock) return false;
+      if (IsGotReward != other.IsGotReward) return false;
+      if (StartTime != other.StartTime) return false;
+      if (EndTime != other.EndTime) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MailType != 0) hash ^= MailType.GetHashCode();
+      if (MailId.Length != 0) hash ^= MailId.GetHashCode();
+      if (Title.Length != 0) hash ^= Title.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
+      if (IsRead != false) hash ^= IsRead.GetHashCode();
+      if (IsLock != false) hash ^= IsLock.GetHashCode();
+      if (IsGotReward != false) hash ^= IsGotReward.GetHashCode();
+      if (StartTime != 0) hash ^= StartTime.GetHashCode();
+      if (EndTime != 0) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MailType != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MailType);
+      }
+      if (MailId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MailId);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Title);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Content);
+      }
+      if (IsRead != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsRead);
+      }
+      if (IsLock != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsLock);
+      }
+      if (IsGotReward != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsGotReward);
+      }
+      if (StartTime != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(StartTime);
+      }
+      if (EndTime != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MailType != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MailType);
+      }
+      if (MailId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MailId);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Title);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Content);
+      }
+      if (IsRead != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsRead);
+      }
+      if (IsLock != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsLock);
+      }
+      if (IsGotReward != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsGotReward);
+      }
+      if (StartTime != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(StartTime);
+      }
+      if (EndTime != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MailType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MailType);
+      }
+      if (MailId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MailId);
+      }
+      if (Title.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
+      }
+      if (IsRead != false) {
+        size += 1 + 1;
+      }
+      if (IsLock != false) {
+        size += 1 + 1;
+      }
+      if (IsGotReward != false) {
+        size += 1 + 1;
+      }
+      if (StartTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StartTime);
+      }
+      if (EndTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(p_mail_info other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MailType != 0) {
+        MailType = other.MailType;
+      }
+      if (other.MailId.Length != 0) {
+        MailId = other.MailId;
+      }
+      if (other.Title.Length != 0) {
+        Title = other.Title;
+      }
+      if (other.Content.Length != 0) {
+        Content = other.Content;
+      }
+      if (other.IsRead != false) {
+        IsRead = other.IsRead;
+      }
+      if (other.IsLock != false) {
+        IsLock = other.IsLock;
+      }
+      if (other.IsGotReward != false) {
+        IsGotReward = other.IsGotReward;
+      }
+      if (other.StartTime != 0) {
+        StartTime = other.StartTime;
+      }
+      if (other.EndTime != 0) {
+        EndTime = other.EndTime;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MailType = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            MailId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Title = input.ReadString();
+            break;
+          }
+          case 34: {
+            Content = input.ReadString();
+            break;
+          }
+          case 40: {
+            IsRead = input.ReadBool();
+            break;
+          }
+          case 48: {
+            IsLock = input.ReadBool();
+            break;
+          }
+          case 56: {
+            IsGotReward = input.ReadBool();
+            break;
+          }
+          case 64: {
+            StartTime = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            EndTime = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MailType = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            MailId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Title = input.ReadString();
+            break;
+          }
+          case 34: {
+            Content = input.ReadString();
+            break;
+          }
+          case 40: {
+            IsRead = input.ReadBool();
+            break;
+          }
+          case 48: {
+            IsLock = input.ReadBool();
+            break;
+          }
+          case 56: {
+            IsGotReward = input.ReadBool();
+            break;
+          }
+          case 64: {
+            StartTime = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            EndTime = input.ReadInt32();
             break;
           }
         }
